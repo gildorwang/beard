@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- DEBUG -->
+<!-- disable offline caching in debug mode -->
+<html>
+<!-- /DEBUG -->
+<!-- PRODUCTION
+<html manifest="cache.appcache">
+/PRODUCTION -->
+<head>
+	<script src="js/libs/jquery.js"></script>
+</head>
+<body>
+	<h1></h1>
+</body>
+<script type="text/javascript">
+$(function(){
+	$('h1').html('superwolf');
+	$.post('/upload',{name:'superwolf',data:'superwolf'},function(){
+		alert('superwolf');
+	})
+})
+</script>
+</html>
