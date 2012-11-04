@@ -14,13 +14,13 @@ mindmaps.Node = function() {
       weight : "normal",
       decoration : "none",
       /** unit: pixel */
-      size : 22,
-      color : "#000000"
+      size : 18,
+      color : "#000"
     }
   };
   this.offset = new mindmaps.Point();
   this.foldChildren = false;
-  this.branchColor = "#000000";
+  this.branchColor = "#000";
 };
 
 /**

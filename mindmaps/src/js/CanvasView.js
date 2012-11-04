@@ -179,7 +179,6 @@ mindmaps.DefaultCanvasView = function() {
 
   function drawLineCanvas($canvas, depth, offsetX, offsetY, $node, $parent,
       color) {
-    color = "rgba(222,222,222,0.8)";
     var canvas = $canvas[0];
     var ctx = canvas.getContext("2d");
 
@@ -395,7 +394,6 @@ mindmaps.DefaultCanvasView = function() {
       "class" : "node-caption node-text-behaviour",
       text : node.text.caption
     }).css({
-      "color" : "white",
       "font-size" : this.zoomFactor * 100 + "%",
       "font-weight" : font.weight,
       "font-style" : font.style,

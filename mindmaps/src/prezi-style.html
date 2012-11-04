@@ -28,12 +28,6 @@
 <link rel="stylesheet" href="css/Aristo/jquery-ui-1.8.7.custom.css" />
 <link rel="stylesheet" href="css/minicolors/jquery.miniColors.css">
 
-
-<link rel="stylesheet" type="text/css" href="../../bootmetro/content/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../../bootmetro/content/css/bootstrap-responsive.css">
-<link rel="stylesheet" type="text/css" href="../../bootmetro/content/css/bootmetro.css">
-<link rel="stylesheet" type="text/css" href="../../bootmetro/content/css/icomoon.css">
-
 <script id="template-float-panel" type="text/x-jquery-tmpl">
 <div class="ui-widget ui-dialog ui-corner-all ui-widget-content float-panel no-select">
   <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix">
@@ -199,7 +193,7 @@
 </script>
 
 </head>
-<body id="myBody">
+<body>
   <div id="print-area">
     <p class="print-placeholder">Please use the print option from the
       mind map menu</p>
@@ -207,6 +201,29 @@
   <!-- DEBUG -->
   <!-- <div id="debug-warning">Running in DEBUG mode.</div> -->
   <!-- /DEBUG -->
+  <div id="left-toolbar">
+     <div class="toolbar-vertical">
+        <img src="img/logo.png" style="width:80px;margin:5px;"/>
+        <button id="new-btn">
+          新建
+        </button>
+        <button id="delete-btn">
+          删除
+        </button>
+        <button id="save-btn">
+          保存
+        </button>
+        <button id="open-btn">
+          打开
+        </button>
+        <button id="show-btn">
+          演示模式
+        </button>
+        <button id="demo-btn">
+          Demo
+        </button>
+    </div>
+  </div>
   <div id="container">
     <div id="topbar">
       <div id="toolbar">
@@ -224,50 +241,8 @@
     <div id="canvas-container">
       <div id="drawing-area" class="no-select"></div>
     </div>
-    <footer class="win-commandlayout">
-      <div class="container">
-         <div class="row">
-            <div class="span5 align-left" id="list-btn">
-              <a class="win-command">
-                <span class="win-commandimage win-commandring">&#xe1cd;</span>
-                <span class="win-label">List</span>
-              </a>
-
-              <hr class="win-command" />
-
-
-              <button class="win-command" id="add-btn">
-                <span class="win-commandimage win-commandring">&#xe03e;</span>
-                <span class="win-label">Add</span>
-              </button>
-
-              <button class="win-command" id="delete-btn">
-                <span class="win-commandimage win-commandring">&#xe03d;</span>
-                <span class="win-label">Delete</span>
-              </button>
-
-              <!--
-              <button class="win-command" id="save-btn">
-                <span class="win-commandimage win-commandring">&#xe110;</span>
-                <span class="win-label">Save</span>
-              </button>
-              -->
-             
-
-            </div>
-            <div class="span1 align-right" style="float:right;" id="slide-btn">
-              <a class="win-command">
-                <span class="win-commandimage win-commandring">&#xe1ca;</span>
-                <span class="win-label">Slide</span>
-              </a>
-            </div>
-         </div>
-      </div>
-    </footer>
   </div>
 
-
- 
   <!-- DEBUG -->
   <!-- set debug flag for all scripts. Will be removed in production -->
   <script type="text/javascript">
@@ -334,5 +309,4 @@
   <script src="js/FilePicker.js"></script>
   <!-- JS:LIB:END -->
 </body>
-
 </html>

@@ -8,6 +8,7 @@ connect()
 
 	next()
 )
+.use('/', connect.static(__dirname + '/'))
 .use('/mindmaps',connect.static(__dirname + '/mindmaps'))
 # .use('/mindmaps/bin',connect.static(__dirname + '/mindmaps/bin'))
 .use('/deck.js',connect.static(__dirname + '/deck.js'))

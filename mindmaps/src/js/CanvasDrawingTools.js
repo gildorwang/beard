@@ -6,7 +6,6 @@ mindmaps.CanvasDrawingUtil = {
    * @returns {Number}
    */
   getLineWidth : function(zoomFactor, depth) {
-    return 4;
     // var width = this.zoomFactor * (10 - depth);
     var width = zoomFactor * (12 - depth * 2);
 

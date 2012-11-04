@@ -23,6 +23,11 @@ html,body {
   font-size: 10px; /*conform with jquery-ui em settings */
 }
 
+#myBody{
+  padding:0px;
+  margin:0px;
+}
+
 #container {
   position: absolute; /* needed for footer positioning*/
   height: auto !important;
@@ -30,25 +35,7 @@ html,body {
   top:0;
   bottom:0;
   right:0;
-  left:90px;
-}
-#left-toolbar{
-  position: absolute; /* needed for footer positioning*/
-  height: auto !important;
-  min-height: 100%;
-  top:0;
-  bottom:0;
-  width:90px;
-  left:0; 
-  background: #333;
-}
-#left-toolbar button{
-  margin-top:3px;
-  background:green;
-  color:white;
-}
-#left-toolbar button:hover{
-  opacity: 0.8;
+  left:0;
 }
 
 #topbar {
@@ -56,6 +43,16 @@ html,body {
   overflow: hidden; /* causes container to stretch vertically */
   width: 100%;
   display:none;
+}
+
+footer{
+  display:none;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  /*bottom:1200px;*/
+
 }
 
 .logo-bg {
@@ -252,8 +249,6 @@ to {-webkit-transform: translate3d(0,100px,0) scale(1.3);background:yellow;}
 }
 
 .mindmap .node-caption {
-  /*background: rgba(255,255,255,0.6);
-  box-shadow: 1px 1px 2px #bbb;*/
   position: relative;
   cursor: move;
   z-index: 100;
@@ -288,7 +283,7 @@ to {-webkit-transform: translate3d(0,100px,0) scale(1.3);background:yellow;}
 .mindmap .node-caption.root {
 
   cursor: default;
-  background: rgba(30,30,30,0.3);
+  background: white;
   border: 3px solid orange;
   border-radius: 10px 10px 10px 10px;
   left: -50px;
