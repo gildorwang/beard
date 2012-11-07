@@ -212,8 +212,8 @@ footer{
 #drawing-area {
   position: absolute;
   background-color: white;
-  /*background-image: url("../img/grid.gif");*/
-  background-image: url("../bg.JPG");
+  background-image: url("../img/grid.gif");
+  /*background-image: url("../bg.JPG");*/
   /*background-size: 24px 24px;*/
   /* need this for webkit as well. */
   /*image-rendering: -moz-crisp-edges;
