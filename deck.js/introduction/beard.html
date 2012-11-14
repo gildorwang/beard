@@ -214,6 +214,7 @@
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../jquery-1.7.2.min.js"><\/script>')</script> -->
 <script type="text/javascript" src="../../lib/jquery-1.8.0-windows8-ready.js"></script>
+<!-- <script type="text/javascript" src="../../lib/jquery-1.8.2.js"></script> -->
 <script type="text/javascript" src="../../lib/jquery.tmpl.js"></script>
 
 <!-- Deck Core and extensions -->
@@ -246,7 +247,9 @@ $(function () {
     
     var data = localStorage.getItem(getParameterByName('key'));
 	var mindMap = JSON.parse(data);
-	// $('body').html('');
+	console.log(mindMap);
+	console.log($('#tmplTitle').tmpl(mindMap.mindmap.root));
+	window.test = $('#tmplTitle').tmpl(mindMap.mindmap.root);
 	$('#tmplTitle').tmpl(mindMap.mindmap.root).appendTo('body');
 	for (var i = 0; i < mindMap.mindmap.root.children.length; i++) {
 		$('#tmplSlide').tmpl(mindMap.mindmap.root.children[i]).appendTo('body');

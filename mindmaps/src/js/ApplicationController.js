@@ -160,12 +160,6 @@ mindmaps.ApplicationController = function() {
     $('#save-btn').click(function(){
       doSaveDocument();
     });
-      $('#drawing-area').click(function() {
-          var doc = mindmapModel.getDocument();
-          var key = 'mindmap_' + doc.id + '@' + doc.title;
-          localStorage.setItem(key, doc.serialize());
-          window.location = '../../deck.js/introduction/beard.html?key=' + key;  
-      });
     
     $('#list-btn').click(function(){
       window.location = '../../bootmetro/list.html';      
@@ -175,7 +169,7 @@ mindmaps.ApplicationController = function() {
       var doc = mindmapModel.getDocument();
       var key = 'mindmap_' + doc.id + '@' + doc.title;
       localStorage.setItem(key, doc.serialize());
-      window.location = '../../deck.js/introduction/beard.html?key=' + key;      
+      window.location = '../../deck.js/introduction/beard.html?key=' + key;
     });
 
     function SlideChnage(e){

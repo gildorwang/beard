@@ -29,10 +29,10 @@
 <link rel="stylesheet" href="css/minicolors/jquery.miniColors.css">
 
 
-<link rel="stylesheet" type="text/css" href="../../bootmetro/content/css/bootstrap.css">
+<!-- <link rel="stylesheet" type="text/css" href="../../bootmetro/content/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../../bootmetro/content/css/bootstrap-responsive.css">
 <link rel="stylesheet" type="text/css" href="../../bootmetro/content/css/bootmetro.css">
-
+ -->
 <script id="template-float-panel" type="text/x-jquery-tmpl">
 <div class="ui-widget ui-dialog ui-corner-all ui-widget-content float-panel no-select">
   <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix">
@@ -223,36 +223,25 @@
     <div id="canvas-container">
       <div id="drawing-area" class="no-select"></div>
     </div>
+    
     <footer class="win-commandlayout">
-      <div class="container">
-         <div class="row">
-            <div class="span5 align-left" id="list-btn">
-              <a class="win-command">
-                <span class="win-commandimage win-commandring">&#xe1cd;</span>
-                <span class="win-label">List</span>
-              </a>
+      <button class="win-command" id="list-btn">
+        <span class="win-label">List</span>
+      </button>
 
-              <hr class="win-command" />
+      <button class="win-command" id="add-btn">
+        <span class="win-label">Add</span>
+      </button>
 
-              <button class="win-command" id="add-btn">
-                <span class="win-commandimage win-commandring">&#xe03e;</span>
-                <span class="win-label">Add</span>
-              </button>
-
-              <button class="win-command" id="delete-btn">
-                <span class="win-commandimage win-commandring">&#xe03d;</span>
-                <span class="win-label">Delete</span>
-              </button>
-            </div>
-            <div class="span1 align-right" style="float:right;" id="slide-btn">
-              <a class="win-command">
-                <span class="win-commandimage win-commandring">&#xe1ca;</span>
-                <span class="win-label">Slide</span>
-              </a>
-            </div>
-         </div>
-      </div>
+      <button class="win-command" id="delete-btn">
+        <span class="win-label">Delete</span>
+      </button>
+    
+      <button class="win-command" id="slide-btn">
+        <span class="win-label">Slide</span>
+      </button>
     </footer>
+    <!---->
   </div>
  
   <!-- DEBUG -->
