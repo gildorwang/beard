@@ -75,10 +75,10 @@ mindmaps.ApplicationController = function() {
 
   function setDocument(doc) {
     mindmapModel.setDocument(doc);
-
-    var presenter = new mindmaps.OpenDocumentPresenter(eventBus,
-        mindmapModel, new mindmaps.OpenDocumentView(), null);
-    presenter.go();
+    
+    // var presenter = new mindmaps.OpenDocumentPresenter(eventBus,
+    //     mindmapModel, new mindmaps.OpenDocumentView(), null);
+    // presenter.go();
   }
 
   this.open = doOpenDocumentFromObject;
