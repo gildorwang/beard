@@ -7,7 +7,7 @@
         md.commands.append(new Windows.UI.Popups.UICommand('Cancel'));
         md.showAsync().then(function(command) {
             if (command.label === 'OK') {
-                WinJS.Navigation.navigate('/mindmaps/src/index.html?key=' + item.key);
+              WinJS.Navigation.navigate('/mindmaps/src/index.html', { key: item.key });
             }
         });
     }

@@ -34,42 +34,47 @@ mindmaps.VERSION = "0.7.2";
 // experimental app cache invalidator. from:
 // http://www.html5rocks.com/en/tutorials/appcache/beginner/#toc-updating-cache/
 // Check if a new cache is available on page load.
-window.addEventListener('load', function(e) {
-  window.applicationCache.addEventListener('updateready', function(e) {
-    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-      // Browser downloaded a new app cache.
-      window.applicationCache.swapCache();
-      window.onbeforeunload = null;
-      if (confirm('A new version of the app is available. Load it?')) {
-        window.location.reload();
-      }
-    } else {
-      // Manifest didn't changed. Nothing new to server.
-    }
-  }, false);
-
-}, false)
+//window.addEventListener('load', function(e) {
+//  window.applicationCache.addEventListener('updateready', function(e) {
+//    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+//      // Browser downloaded a new app cache.
+//      window.applicationCache.swapCache();
+//      window.onbeforeunload = null;
+//      if (confirm('A new version of the app is available. Load it?')) {
+//        window.location.reload();
+//      }
+//    } else {
+//      // Manifest didn't changed. Nothing new to server.
+//    }
+//  }, false);
+//
+//}, false)
 
 /**
  * Start up. This function is executed when the DOM is loaded.
  */
-$(function() {
-  removeEventLayerXY();
+WinJS.UI.Pages.define("/mindmaps/src/index.html", {
+  ready: function(element, options) {
+    removeEventLayerXY();
 
-  // take car of old browsers
-  createECMA5Shims();
-  createHTML5Shims();
+    // take car of old browsers
+    createECMA5Shims();
+    createHTML5Shims();
 
-  setupConsole();
-  trackErrors();
+    setupConsole();
+    trackErrors();
 
-  if (!mindmaps.DEBUG) {
-    addUnloadHook();
+    if (!mindmaps.DEBUG) {
+      addUnloadHook();
+    }
+
+    // create a new app controller and go
+    var appController = new mindmaps.ApplicationController();
+    appController.go();
+
+    $("#bottombar table").remove();
+    $("input[name='hosted_button_id']").val("123");
   }
-
-  // create a new app controller and go
-  var appController = new mindmaps.ApplicationController();
-  appController.go();
 });
 
 /**
@@ -150,12 +155,6 @@ function setupConsole() {
 
   window.console = console;
 }
-
-// warum sind manche leute nur so drauf...
-$(function() {
-  $("#bottombar table").remove();
-  $("input[name='hosted_button_id']").val("123");
-});
 
 /**
 * Creates ECMA5 shims if the browser does not implement them.
