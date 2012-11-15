@@ -23,7 +23,7 @@ mindmaps.ApplicationController = function() {
     var doc = mindmapModel.getDocument();
     doCloseDocument();
 
-    $('#drawing-area').css('background-image', 'url("img/grid.gif")')
+    $('#drawing-area').css('background-image', 'url("img/grid.gif")');
 
     var presenter = new mindmaps.NewDocumentPresenter(eventBus,
         mindmapModel, new mindmaps.NewDocumentView());
@@ -36,9 +36,16 @@ mindmaps.ApplicationController = function() {
   function doSaveDocument() {
     var doc = mindmapModel.getDocument();
     doc.prepareSave();
-    
+
+    if (doc.title !== 'Central Idea')
+    {
+      var key = 'mindmap_' + doc.id + '@' + doc.title;
+      localStorage.setItem(key, doc.serialize());
+    }
     return;
   }
+
+  this.save = doSaveDocument;
 
   /**
    * Handles the close document command.

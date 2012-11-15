@@ -70,6 +70,15 @@ WinJS.UI.Pages.define("/mindmaps/src/index.html", {
 
     // create a new app controller and go
     var appController = new mindmaps.ApplicationController();
+
+    var saveTimer = setInterval(function() {
+      appController.save();
+    }, 1000);
+    
+    WinJS.Navigation.addEventListener("beforenavigate", function() {
+      clearInterval(saveTimer);
+    });
+
     appController.go();
 
     $("#bottombar table").remove();

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="47707CANAL.mSlide" Version="1.0.0.6" Publisher="CN=FF21260F-2BDF-43D5-B83E-9B2ED02149B2" />
+  <Identity Name="47707CANAL.mSlide" Version="1.0.0.8" Publisher="CN=FF21260F-2BDF-43D5-B83E-9B2ED02149B2" />
   <Properties>
     <DisplayName>mSlide</DisplayName>
     <PublisherDisplayName>CANAL</PublisherDisplayName>
