@@ -162,7 +162,7 @@ mindmaps.ApplicationController = function() {
     });
     
     $('#list-btn').click(function(){
-        WinJS.Navigation.navigate('/default.html');      
+        WinJS.Navigation.navigate('/pages/groupedItems/groupedItems.html');
 //      window.location = '../../bootmetro/list.html';      
     });
 
