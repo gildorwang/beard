@@ -75,7 +75,6 @@
     <Content Include="mindmaps\package.json" />
     <Content Include="mindmaps\README.md" />
     <Content Include="mindmaps\src\about.html" />
-    <Content Include="mindmaps\src\cache.appcache" />
     <Content Include="mindmaps\src\css\about.css" />
     <Content Include="mindmaps\src\css\app.css" />
     <Content Include="mindmaps\src\css\Aristo\images\bg_fallback.png" />
@@ -88,8 +87,6 @@
     <Content Include="mindmaps\src\css\common.css" />
     <Content Include="mindmaps\src\css\images\._icons.png" />
     <Content Include="mindmaps\src\css\images\icons.png" />
-    <Content Include="mindmaps\src\css\metro\modern-responsive.css" />
-    <Content Include="mindmaps\src\css\metro\modern.css" />
     <Content Include="mindmaps\src\css\metro\theme-dark.css" />
     <Content Include="mindmaps\src\css\minicolors\images\circle.gif" />
     <Content Include="mindmaps\src\css\minicolors\images\gradient.png" />
@@ -106,6 +103,7 @@
     <Content Include="mindmaps\src\img\openhand.png" />
     <Content Include="mindmaps\src\img\plus-minus.png" />
     <Content Include="mindmaps\src\img\transparent.png" />
+    <Content Include="mindmaps\src\index2.html" />
     <Content Include="mindmaps\src\index.html" />
     <Content Include="mindmaps\src\js\Action.js" />
     <Content Include="mindmaps\src\js\ApplicationController.js" />
@@ -123,7 +121,6 @@
     <Content Include="mindmaps\src\js\FloatPanel.js" />
     <Content Include="mindmaps\src\js\HelpController.js" />
     <Content Include="mindmaps\src\js\Inspector.js" />
-    <Content Include="mindmaps\src\js\libs\downloadify.min.js" />
     <Content Include="mindmaps\src\js\libs\dragscrollable.js" />
     <Content Include="mindmaps\src\js\libs\events.js" />
     <Content Include="mindmaps\src\js\libs\jquery-ui-1.8.11.custom.complete.min.js" />
@@ -139,7 +136,6 @@
     <Content Include="mindmaps\src\js\libs\metro\buttonset.js" />
     <Content Include="mindmaps\src\js\libs\metro\dropdown.js" />
     <Content Include="mindmaps\src\js\libs\metro\pagecontrol.js" />
-    <Content Include="mindmaps\src\js\libs\swfobject.js" />
     <Content Include="mindmaps\src\js\MainViewController.js" />
     <Content Include="mindmaps\src\js\MindMap.js" />
     <Content Include="mindmaps\src\js\MindMapModel.js" />
@@ -162,8 +158,6 @@
     <Content Include="mindmaps\src\js\UndoManager.js" />
     <Content Include="mindmaps\src\js\Util.js" />
     <Content Include="mindmaps\src\js\ZoomController.js" />
-    <Content Include="mindmaps\src\media\downloadify.swf" />
-    <Content Include="mindmaps\src\prezi-style.html" />
     <Content Include="pages\itemDetail\itemDetail.css" />
     <Content Include="pages\itemDetail\itemDetail.html" />
     <Content Include="pages\itemDetail\itemDetail.js" />

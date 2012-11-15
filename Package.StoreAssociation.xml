@@ -355,6 +355,8 @@
       <ReservedName>mSlide</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
-  <AccountPackageIdentityNames />
+  <AccountPackageIdentityNames>
+    <MainPackageIdentityName>47707CANAL.MonitorTesterLite</MainPackageIdentityName>
+  </AccountPackageIdentityNames>
   <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/5f1b8fe5-28a3-4802-a250-7662a6a9328f" />
 </StoreAssociation>
