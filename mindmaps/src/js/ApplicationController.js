@@ -23,7 +23,7 @@ mindmaps.ApplicationController = function() {
     var doc = mindmapModel.getDocument();
     doCloseDocument();
 
-    $('#drawing-area').css('background-image', 'url("img/grid.gif")');
+//    $('#drawing-area').css('background-image', 'url("img/grid.gif")');
 
     var presenter = new mindmaps.NewDocumentPresenter(eventBus,
         mindmapModel, new mindmaps.NewDocumentView());
@@ -76,9 +76,9 @@ mindmaps.ApplicationController = function() {
   function setDocument(doc) {
     mindmapModel.setDocument(doc);
     
-    // var presenter = new mindmaps.OpenDocumentPresenter(eventBus,
-    //     mindmapModel, new mindmaps.OpenDocumentView(), null);
-    // presenter.go();
+//     var presenter = new mindmaps.OpenDocumentPresenter(eventBus,
+//         mindmapModel, new mindmaps.OpenDocumentView(), null);
+//     presenter.go();
   }
 
   this.open = doOpenDocumentFromObject;
@@ -131,13 +131,16 @@ mindmaps.ApplicationController = function() {
   /**
    * Launches the main view controller.
    */
-  this.go = function() {
+  this.go = function(doc) {
     var viewController = new mindmaps.MainViewController(eventBus,
         mindmapModel, commandRegistry);
     viewController.go();
 
-    // doOpenDocument();
-    doNewDocument();
+    if (doc !== undefined) {
+      doOpenDocumentFromObject(doc);
+    } else {
+      doNewDocument();
+    }
   };
 
   this.init();

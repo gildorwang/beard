@@ -81,8 +81,8 @@ if(window.WinJS){
         clearInterval(saveTimer);
       });
 
-      if (options.data) {
-        appController.open(options);
+      if (options.mindmap) {
+        appController.go(options);
       }
       else {
         appController.go();

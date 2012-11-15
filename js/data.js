@@ -57,7 +57,13 @@
       create: { key: "create", title: "Create New", subtitle: null, backgroundImage: darkGray, description: "Here list all the templates you can use to create a mind map. <br />To view details, select one." },
       open: { key: "open", title: "Open Existing", subtitle: null, backgroundImage: lightGray, description: "Here list all your existing mind maps. <br />To view details, select one." }
     };
-    var createItem = { group: groups.create, title: "Blank", subtitle: "Create a blank mind map.", description: null, content: "Use this template to create a blank mind map.", backgroundImage: "/images/new.png" };
+    var createItem = {
+      group: groups.create, title: "Blank",
+      subtitle: "Create a blank mind map.", description: null,
+      content: "Use this template to create a blank mind map.",
+      backgroundImage: "/images/new.png",
+      backgroundImageSmall: "/images/new.png"
+    };
 
     while (list.length > 0) {
       list.pop();
@@ -75,11 +81,14 @@
             content: map.title,
             dates: map.dates,
             dimensions: map.dimensions,
+            subtitle: "Created " + (new Date(map.dates.created)),
             created: new Date(map.dates.created),
             description: null,
             mindmap: map.mindmap,
             data: map.mindmap,
-            group: groups.open
+            group: groups.open,
+            backgroundImageSmall: '/images/item-460-240.png',
+            backgroundImage: '/images/item-460-240.png'
           });
         }
       }
