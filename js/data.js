@@ -69,11 +69,15 @@
         if (map.title !== 'Central Idea') {
           list.push({
             id: map.id,
+            autosave: map.autosave,
             key: 'mindmap_' + map.id + '@' + map.title,
             title: map.title,
             content: map.title,
+            dates: map.dates,
+            dimensions: map.dimensions,
             created: new Date(map.dates.created),
             description: null,
+            mindmap: map.mindmap,
             data: map.mindmap,
             group: groups.open
           });

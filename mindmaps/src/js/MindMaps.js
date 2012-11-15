@@ -54,7 +54,7 @@ mindmaps.VERSION = "0.7.2";
  * Start up. This function is executed when the DOM is loaded.
  */
 
-if(window.WinJs){
+if(window.WinJS){
   WinJS.UI.Pages.define("/mindmaps/src/index.html", {
     ready: function (element, options) {
       removeEventLayerXY();
