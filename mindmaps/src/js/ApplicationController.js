@@ -162,14 +162,16 @@ mindmaps.ApplicationController = function() {
     });
     
     $('#list-btn').click(function(){
-      window.location = '../../bootmetro/list.html';      
+        WinJS.Navigation.navigate('/default.html');      
+//      window.location = '../../bootmetro/list.html';      
     });
 
     $('#slide-btn').click(function(){
       var doc = mindmapModel.getDocument();
       var key = 'mindmap_' + doc.id + '@' + doc.title;
       localStorage.setItem(key, doc.serialize());
-      window.location = '../../deck.js/introduction/beard.html?key=' + key;
+      WinJS.Navigation.navigate('../../deck.js/introduction/beard.html?key=' + key);
+//      window.location = '../../deck.js/introduction/beard.html?key=' + key;
     });
 
     function SlideChnage(e){
