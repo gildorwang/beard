@@ -4,7 +4,7 @@
   <Properties>
     <DisplayName>mSlide</DisplayName>
     <PublisherDisplayName>CANAL</PublisherDisplayName>
-    <Logo>images\storelogo.png</Logo>
+    <Logo>images\logo-50.png</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.2.1</OSMinVersion>
@@ -15,9 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="mSlide" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Beard" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="images\splashscreen.png" />
+      <VisualElements DisplayName="mSlide" Logo="images\logo-150.png" SmallLogo="images\logo-30.png" Description="You can use mSlide to create mind maps easily, save them on your device, and export them as slides." ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" ShortName="mSlide" />
+        <SplashScreen Image="images\logo-620-300.png" />
       </VisualElements>
     </Application>
   </Applications>
