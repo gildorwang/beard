@@ -45,6 +45,7 @@ mindmaps.AutoSaveController = function(eventBus, mindmapModel) {
   }
 
   this.isEnabled = function() {
+    return false;
     return mindmapModel.getDocument().isAutoSave();
   }
 

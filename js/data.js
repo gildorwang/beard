@@ -68,12 +68,13 @@
         var map = JSON.parse(localStorage[i]);
         if (map.title !== 'Central Idea') {
           list.push({
-            id: i.id,
+            id: map.id,
             key: 'mindmap_' + map.id + '@' + map.title,
             title: map.title,
             content: map.title,
             created: new Date(map.dates.created),
             description: null,
+            data: map.mindmap,
             group: groups.open
           });
         }

@@ -54,7 +54,7 @@ mindmaps.VERSION = "0.7.2";
  * Start up. This function is executed when the DOM is loaded.
  */
 WinJS.UI.Pages.define("/mindmaps/src/index.html", {
-  ready: function(element, options) {
+  ready: function (element, options) {
     removeEventLayerXY();
 
     // take car of old browsers
@@ -71,15 +71,20 @@ WinJS.UI.Pages.define("/mindmaps/src/index.html", {
     // create a new app controller and go
     var appController = new mindmaps.ApplicationController();
 
-    var saveTimer = setInterval(function() {
+    var saveTimer = setInterval(function () {
       appController.save();
     }, 1000);
-    
-    WinJS.Navigation.addEventListener("beforenavigate", function() {
+
+    WinJS.Navigation.addEventListener("beforenavigate", function () {
       clearInterval(saveTimer);
     });
 
-    appController.go();
+    if (options.data) {
+      appController.open(options);
+    }
+    else {
+      appController.go();
+    }
 
     $("#bottombar table").remove();
     $("input[name='hosted_button_id']").val("123");
@@ -109,9 +114,9 @@ function removeEventLayerXY() {
 /**
 * Adds a confirmation dialog when the user navigates away from the app.
 */
-function addUnloadHook () {
+function addUnloadHook() {
   window.onbeforeunload = function (e) {
-    var msg = "Are you sure? Any unsaved progress will be lost."
+    var msg = "Are you sure? Any unsaved progress will be lost.";
     e = e || window.event;
 
     // For IE and Firefox prior to version 4
@@ -126,13 +131,13 @@ function addUnloadHook () {
 
 
 function trackErrors() {
-  window.onerror = function(msg, url, line) {
+  window.onerror = function (msg, url, line) {
     if (!window._gaq) {
       return;
     }
 
     // Track JS errors in GA.
-    _gaq.push([ '_trackEvent', 'Error Log', msg, url + '_' + line ]);
+    _gaq.push(['_trackEvent', 'Error Log', msg, url + '_' + line]);
 
     return false; // false prevents default error handling.
   };
@@ -142,11 +147,11 @@ function trackErrors() {
 * Initialize the console object.
 */
 function setupConsole() {
-  var noOp = function() {};
+  var noOp = function () { };
 
   // provide console object and dummy functions if not built-in
   var console = window.console || {};
-  ['log', 'info', 'debug', 'warn', 'error'].forEach(function(prop) {
+  ['log', 'info', 'debug', 'warn', 'error'].forEach(function (prop) {
     console[prop] = console[prop] || noOp;
   });
 
@@ -157,7 +162,7 @@ function setupConsole() {
     console.info = noOp;
     console.log = noOp;
     console.warn = noOp;
-    console.error = function(s) {
+    console.error = function (s) {
       window.alert("Error: " + s);
     };
   }
@@ -179,7 +184,7 @@ function createECMA5Shims() {
       var target = this;
       if (typeof target.apply !== "function"
       || typeof target.call !== "function")
-      return new TypeError();
+        return new TypeError();
       var args = slice.call(arguments);
 
       function bound() {
@@ -212,7 +217,7 @@ function createECMA5Shims() {
   if (!Array.prototype.forEach) {
     Array.prototype.forEach = function forEach(block, thisObject) {
       var len = +this.length;
-      for ( var i = 0; i < len; i++) {
+      for (var i = 0; i < len; i++) {
         if (i in this) {
           block.call(thisObject, this[i], i, this);
         }
@@ -230,7 +235,7 @@ function createECMA5Shims() {
 
       var res = new Array(len);
       var thisp = arguments[1];
-      for ( var i = 0; i < len; i++) {
+      for (var i = 0; i < len; i++) {
         if (i in this)
           res[i] = fun.call(thisp, this[i], i, this);
       }
@@ -244,10 +249,10 @@ function createECMA5Shims() {
     Array.prototype.filter = function filter(block /* , thisp */) {
       var values = [];
       var thisp = arguments[1];
-      for ( var i = 0; i < this.length; i++)
+      for (var i = 0; i < this.length; i++)
         if (block.call(thisp, this[i]))
           values.push(this[i]);
-        return values;
+      return values;
     };
   }
 
@@ -255,10 +260,10 @@ function createECMA5Shims() {
   if (!Array.prototype.every) {
     Array.prototype.every = function every(block /* , thisp */) {
       var thisp = arguments[1];
-      for ( var i = 0; i < this.length; i++)
+      for (var i = 0; i < this.length; i++)
         if (!block.call(thisp, this[i]))
           return false;
-        return true;
+      return true;
     };
   }
 
@@ -266,10 +271,10 @@ function createECMA5Shims() {
   if (!Array.prototype.some) {
     Array.prototype.some = function some(block /* , thisp */) {
       var thisp = arguments[1];
-      for ( var i = 0; i < this.length; i++)
+      for (var i = 0; i < this.length; i++)
         if (block.call(thisp, this[i]))
           return true;
-        return false;
+      return false;
     };
   }
 
@@ -403,17 +408,17 @@ function createHTML5Shims() {
   // localstorage dummy (does nothing)
   if (typeof window.localStorage == 'undefined') {
     window.localStorage = {
-      getItem : function() {
+      getItem: function () {
         return null;
       },
-      setItem : function() {
+      setItem: function () {
       },
-      clear : function() {
+      clear: function () {
       },
-      removeItem : function() {
+      removeItem: function () {
       },
-      length : 0,
-      key : function() {
+      length: 0,
+      key: function () {
         return null;
       }
     };

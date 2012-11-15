@@ -65,12 +65,18 @@ mindmaps.ApplicationController = function() {
    */
   function doOpenDocument(data) {
     var doc = mindmaps.Document.fromJSON(data);
+    doOpenDocumentFromObject(doc);
+  }
+
+  function doOpenDocumentFromObject(doc) {
     mindmapModel.setDocument(doc);
-    
+
     var presenter = new mindmaps.OpenDocumentPresenter(eventBus,
         mindmapModel, new mindmaps.OpenDocumentView(), filePicker);
     presenter.go();
   }
+
+  this.open = doOpenDocumentFromObject;
 
   function doExportDocument() {
     var presenter = new mindmaps.ExportMapPresenter(eventBus,
