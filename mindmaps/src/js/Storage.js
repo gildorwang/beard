@@ -1,4 +1,4 @@
-// TODO store a wrapper object with doc title, modified date and document as string in localstorage.
+﻿// TODO store a wrapper object with doc title, modified date and document as string in localstorage.
 // in open document window show wrapper object and only parse document on demand.
 // when many large documents are stored in LS, opening of window takes a rather long time
 mindmaps.LocalStorage = (function() {

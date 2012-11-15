@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new InspectorView.
  * 
  * @constructor

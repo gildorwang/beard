@@ -1,4 +1,4 @@
-## 2.0 BOOTSTRAP JS PHILOSOPHY
+﻿## 2.0 BOOTSTRAP JS PHILOSOPHY
 These are the high-level design rules which guide the development of Bootstrap's plugin apis.
 
 ---
@@ -39,7 +39,7 @@ Options should be sparse and add universal value. We should pick the right defau
 
 All plugins should have a default object which can be modified to effect all instance's default options. The defaults object should be available via `$.fn.plugin.defaults`.
 
-    $.fn.modal.defaults = { … }
+    $.fn.modal.defaults = { 鈥?}
 
 An options definition should take the following form:
 

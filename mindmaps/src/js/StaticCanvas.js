@@ -1,4 +1,4 @@
-// TODO proper emulation of line-break: word-wrap
+﻿// TODO proper emulation of line-break: word-wrap
 
 /**
  * Object that renders a mindmap model onto a single canvas object. The map will

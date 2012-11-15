@@ -1,4 +1,4 @@
-/**
+﻿/**
  * <pre>
  * Creates a new MindMapModel. 
  * 

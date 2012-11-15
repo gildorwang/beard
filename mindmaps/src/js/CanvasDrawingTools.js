@@ -1,4 +1,4 @@
-mindmaps.CanvasDrawingUtil = {
+﻿mindmaps.CanvasDrawingUtil = {
   /**
    * Calculates the width of a branch for a node for the given depth
    * 

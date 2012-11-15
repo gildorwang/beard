@@ -1,4 +1,4 @@
-describe('Deck JS Navigation Buttons', function() {
+﻿describe('Deck JS Navigation Buttons', function() {
 	beforeEach(function() {
 		loadFixtures('standard.html');
 		if (Modernizr.history) {

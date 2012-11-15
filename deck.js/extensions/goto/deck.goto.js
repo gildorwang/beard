@@ -1,4 +1,4 @@
-/*!
+﻿/*!
 Deck JS - deck.goto
 Copyright (c) 2011 Caleb Troughton
 Dual licensed under the MIT license and GPL license.

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new ZoomController. Object that controls the zoom setting.
  * 
  * @constructor

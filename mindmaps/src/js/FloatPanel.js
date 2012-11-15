@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new FloatPanelFactory. This factory object can create new instances
  * of mindmaps.FloatPanel that are constrained inside the container.
  * 

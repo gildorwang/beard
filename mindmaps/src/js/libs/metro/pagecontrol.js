@@ -1,4 +1,4 @@
-(function($){
+﻿(function($){
     $.fn.PageControl = function( options ){
         var defaults = {
         };

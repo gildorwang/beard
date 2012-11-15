@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  *  mindmaps - a HTML5 powered mind mapping application
  *  Copyright (C) 2011  David Richard
  *

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Events that the event bus carries.
  * 
  * @namespace

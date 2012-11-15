@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
    $.fn.metro = function () {
       // arrange the section container
       var totalWidth = 0;

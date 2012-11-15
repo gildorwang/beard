@@ -1,4 +1,4 @@
-(function($){
+﻿(function($){
     $.fn.ButtonSet = function( options ){
         var defaults = {
         };

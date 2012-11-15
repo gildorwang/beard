@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new CanvasPresenter. The canvas presenter is responsible for drawing the mind map onto a
  * canvas view and reacting to user input on the map (e.g. dragging a node, double clicking it etc.)
  * 

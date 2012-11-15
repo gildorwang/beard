@@ -1,4 +1,4 @@
-describe('Deck JS Hash Extension', function() {
+﻿describe('Deck JS Hash Extension', function() {
 	beforeEach(function() {
 		loadFixtures('standard.html');
 		if (Modernizr.history) {

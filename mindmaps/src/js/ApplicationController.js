@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new Application Controller.
  * 
  * @constructor
@@ -355,8 +355,8 @@ mindmaps.ApplicationController = function() {
       return name;
     }  
     function RandomArray(count){
-      var original=new Array;//原始数组 
-      //给原始数组original赋值 
+      var original=new Array;//鍘熷鏁扮粍 
+      //缁欏師濮嬫暟缁刼riginal璧嬪€?
       for (var i=0;i<count;i++){ 
        original[i]=i+1; 
       } 

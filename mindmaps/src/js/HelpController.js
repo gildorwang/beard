@@ -1,4 +1,4 @@
-/**
+﻿/**
  * <pre>
  * Listens to HELP_COMMAND and displays notifications.
  * Provides interactive tutorial for first time users.

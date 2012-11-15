@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new ShortcutController. This object takes care of all keyboard
  * shortcuts.
  * 

@@ -1,4 +1,4 @@
-/*!
+﻿/*!
 Deck JS - deck.scale
 Copyright (c) 2011-2012 Caleb Troughton
 Dual licensed under the MIT license and GPL license.

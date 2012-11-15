@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new OpenDocumentView. This view shows a dialog from which the user
  * can select a mind map from the local storage or a hard disk.
  * 

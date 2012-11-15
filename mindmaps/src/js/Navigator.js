@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a NavigatorView. This view shows a minified version of the mindmap +
  * controls for adjusting the zoom.
  * 

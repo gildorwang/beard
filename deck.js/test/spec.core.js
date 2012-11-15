@@ -1,4 +1,4 @@
-// Go tests, go
+﻿// Go tests, go
 describe('Deck JS', function() {
 	describe('standard html structure', function() {
 		beforeEach(function() {

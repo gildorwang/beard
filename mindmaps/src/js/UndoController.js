@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new UndoController. The undo controller manages an instance of
  * UndoManager and delegates all undo and redo commands to the undo manager.
  * 

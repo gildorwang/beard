@@ -1,4 +1,4 @@
-/**
+﻿/**
 * Creates a new SaveDocumentView. This view renders a dialog where the user can
 * save the mind map.
 * 

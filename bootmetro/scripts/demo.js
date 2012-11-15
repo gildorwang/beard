@@ -1,4 +1,4 @@
-$(function(){
+﻿$(function(){
 
    // this is for the appbar-demo page
    if ($("#appbar-theme-select").length){

@@ -1,4 +1,4 @@
-describe('Deck JS Menu', function() {
+﻿describe('Deck JS Menu', function() {
 	var $d = $(document),
 	dsc = defaults.selectors.container;
 	

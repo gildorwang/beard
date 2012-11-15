@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * mustache.js - Logic-less {{mustache}} templates with JavaScript
  * http://github.com/janl/mustache.js
  */

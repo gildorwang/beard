@@ -1,4 +1,4 @@
-/**
+﻿/**
  * The canvas container is the area in between the toolbar and the statusbar.
  * Inside the mind map will be drawn and the floating panels are contained
  * within this area.

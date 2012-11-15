@@ -1,4 +1,4 @@
-// TODO take container as argument,c reate drawing area dynamically. remove on
+﻿// TODO take container as argument,c reate drawing area dynamically. remove on
 // clear();, recreate on init()
 
 /**

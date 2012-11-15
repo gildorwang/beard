@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Unused for now.
  * 
  * @constructor

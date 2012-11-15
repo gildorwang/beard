@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new ClipboardController.
  * Handles copy, cut and paste commands.
  * 

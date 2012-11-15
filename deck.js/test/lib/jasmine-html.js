@@ -1,4 +1,4 @@
-jasmine.TrivialReporter = function(doc) {
+﻿jasmine.TrivialReporter = function(doc) {
   this.document = doc || document;
   this.suiteDivs = {};
   this.logRunningSpecs = false;

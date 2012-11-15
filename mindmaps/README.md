@@ -1,4 +1,4 @@
-# mindmaps
+﻿# mindmaps
 mindmaps is a prototype of an HTML5 based mind mapping application. It lets you create neat looking mind maps in the browser. 
 
 ## HTML5 goodness

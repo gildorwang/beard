@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Class for interaction with the filepicker API. Provides open and save
  * from/to cloud storages.
  *

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new notification and attaches it to the target selector. If the
  * selector matches more than one element, the first one is taken.
  * 

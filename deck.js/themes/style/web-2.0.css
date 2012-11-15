@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 .deck-container {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-size: 1.75em;
@@ -150,7 +150,7 @@
   color: #888;
 }
 .deck-container .slide blockquote:before {
-  content: "“";
+  content: "鈥?;
   position: absolute;
   top: 0;
   left: 0;

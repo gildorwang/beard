@@ -1,4 +1,4 @@
-(function($){
+﻿(function($){
     $.fn.Dropdown = function( options ){
         var defaults = {
         };

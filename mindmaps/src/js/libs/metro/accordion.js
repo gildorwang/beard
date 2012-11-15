@@ -1,4 +1,4 @@
-(function($){
+﻿(function($){
     $.fn.Accordion = function( options ){
         var defaults = {
         };

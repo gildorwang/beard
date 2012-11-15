@@ -1,4 +1,4 @@
-// TODO Rename those objects to TaskBar*
+﻿// TODO Rename those objects to TaskBar*
 
 /**
  * Creates a new StatusBarView.

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Creates a new AutoSaveController. This controller is able to automatically
  * save the document every X minutes. This setting is global for all mindmaps.
  *

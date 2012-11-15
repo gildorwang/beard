@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @constructor
  * @param {mindmaps.EventBus} eventBus
  * @param {mindmaps.CommandRegistry} commandRegistry

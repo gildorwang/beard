@@ -1,4 +1,4 @@
-/*!
+﻿/*!
 Deck JS - deck.core
 Copyright (c) 2011 Caleb Troughton
 Dual licensed under the MIT license and GPL license.
@@ -353,9 +353,9 @@ that use the API provided by core.
 		name: string
 		method: function
 		
-		Adds method to the deck namespace with the key of name. This doesn’t
-		give access to any private member data — public methods must still be
-		used within method — but lets extension authors piggyback on the deck
+		Adds method to the deck namespace with the key of name. This doesn鈥檛
+		give access to any private member data 鈥?public methods must still be
+		used within method 鈥?but lets extension authors piggyback on the deck
 		namespace rather than pollute jQuery.
 		
 		$.deck('extend', 'alert', function(msg) {

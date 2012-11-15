@@ -1,4 +1,4 @@
-describe('Deck JS Quick Go-To', function() {
+﻿describe('Deck JS Quick Go-To', function() {
 	var $d = $(document);
 	
 	beforeEach(function() {
