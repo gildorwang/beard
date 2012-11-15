@@ -28,5 +28,3 @@ connect()
 	res.end(JSON.stringify(files))
 )
 .listen(8000)
-
-console.log('superwolf')

@@ -53,43 +53,71 @@ mindmaps.VERSION = "0.7.2";
 /**
  * Start up. This function is executed when the DOM is loaded.
  */
-WinJS.UI.Pages.define("/mindmaps/src/index.html", {
-  ready: function (element, options) {
-    removeEventLayerXY();
 
-    // take car of old browsers
-    createECMA5Shims();
-    createHTML5Shims();
+if(window.WinJs){
+  WinJS.UI.Pages.define("/mindmaps/src/index.html", {
+    ready: function (element, options) {
+      removeEventLayerXY();
 
-    setupConsole();
-    trackErrors();
+      // take car of old browsers
+      createECMA5Shims();
+      createHTML5Shims();
 
-    if (!mindmaps.DEBUG) {
-      addUnloadHook();
+      setupConsole();
+      trackErrors();
+
+      if (!mindmaps.DEBUG) {
+        addUnloadHook();
+      }
+
+      // create a new app controller and go
+      var appController = new mindmaps.ApplicationController();
+
+      var saveTimer = setInterval(function () {
+        appController.save();
+      }, 1000);
+
+      WinJS.Navigation.addEventListener("beforenavigate", function () {
+        clearInterval(saveTimer);
+      });
+
+      if (options.data) {
+        appController.open(options);
+      }
+      else {
+        appController.go();
+      }
+
+      $("#bottombar table").remove();
+      $("input[name='hosted_button_id']").val("123");
     }
+  }); 
+}
+else{
+ $(function (element, options) {
+      removeEventLayerXY();
 
-    // create a new app controller and go
-    var appController = new mindmaps.ApplicationController();
+      // take car of old browsers
+      createECMA5Shims();
+      createHTML5Shims();
 
-    var saveTimer = setInterval(function () {
-      appController.save();
-    }, 1000);
+      setupConsole();
+      trackErrors();
 
-    WinJS.Navigation.addEventListener("beforenavigate", function () {
-      clearInterval(saveTimer);
-    });
+      if (!mindmaps.DEBUG) {
+        addUnloadHook();
+      }
 
-    if (options.data) {
-      appController.open(options);
-    }
-    else {
+      // create a new app controller and go
+      var appController = new mindmaps.ApplicationController();
+
       appController.go();
-    }
 
-    $("#bottombar table").remove();
-    $("input[name='hosted_button_id']").val("123");
-  }
-});
+      $("#bottombar table").remove();
+      $("input[name='hosted_button_id']").val("123");
+    });
+}
+
 
 /**
  * Remove layerX and layerY from the jQuery event object, it causes heaps of deprecated
