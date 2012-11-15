@@ -112,7 +112,7 @@ mindmaps.OpenDocumentPresenter = function(eventBus, mindmapModel, view, filePick
   /**
    * Open file via cloud
    */
-  view.openCloudButtonClicked = function(e) {
+  /*view.openCloudButtonClicked = function(e) {
     mindmaps.Util.trackEvent("Clicks", "cloud-open");
 
     filePicker.open({
@@ -126,7 +126,7 @@ mindmaps.OpenDocumentPresenter = function(eventBus, mindmapModel, view, filePick
         view.showCloudError(msg);
       }
     });
-  };
+  };*/
 
   // http://www.w3.org/TR/FileAPI/#dfn-filereader
   /**
