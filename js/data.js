@@ -81,7 +81,7 @@
             content: map.title,
             dates: map.dates,
             dimensions: map.dimensions,
-            subtitle: "Created " + (new Date(map.dates.created)),
+            subtitle: "Created " + (moment(new Date(map.dates.created)).fromNow()),
             created: new Date(map.dates.created),
             description: null,
             mindmap: map.mindmap,
